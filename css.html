@@ -19,8 +19,19 @@
               mask-image
             </a>
           </summary>
+          <summary>
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-box-reflect"
+              >-webkit-box-reflect
+            </a>
+            倒影
+          </summary>
+          <summary>@keyframes</summary>
           <div class="view-content">
-            <mask-bg></mask-bg> <mask-top></mask-top>
+            <div class="mask-wrapper">
+              <mask-bg></mask-bg> <mask-top></mask-top>
+            </div>
           </div>
         </div>
         <style class="code" contenteditable="true">
@@ -70,6 +81,11 @@
             /* transition: all 0.4s cubic-bezier(0, 0, 0.28, 1) 1s; */
             animation: mask 0.4s linear infinite alternate;
           }
+          .mask-wrapper {
+            -webkit-box-reflect: below 10px;
+            /* -webkit-box-reflect: below 0 -webkit-linear-gradient(transparent, transparent */
+            /* 50%, rgba(255, 255, 255, 0.3)); */
+          }
         </style>
       </section>
       <section class="code-wrap">
@@ -81,6 +97,7 @@
               >mask-image
             </a>
           </summary>
+          <summary>@keyframes</summary>
           <div class="view-content">
             <div class="mask"></div>
           </div>
@@ -107,8 +124,8 @@
           .mask {
             width: 700px;
             height: 392px;
-            background: black url("./static/images/1534750163.jpg");
-            -webkit-mask-image: url("./static/images/1534750222.jpg");
+            background: black url('./static/images/1534750163.jpg');
+            -webkit-mask-image: url('./static/images/1534750222.jpg');
             animation: mask1 5s linear infinite forwards;
           }
         </style>
