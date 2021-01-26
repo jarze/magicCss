@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="code-wrap">
+        <div class="css-live-wrap">
+          <summary>
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/zh-cn/docs/web/css/mask-image"
+            >
+              mask-image
+            </a>
+          </summary>
+          <div class="view-content">
+            <mask-bg></mask-bg> <mask-top></mask-top>
+          </div>
+        </div>
+        <style class="code" contenteditable="true">
+          @keyframes mask {
+            from {
+              background-position: 0 -100%;
+            }
+            to {
+              background-position: 0 0;
+            }
+          }
+          mask-bg,
+          mask-top {
+            display: block;
+            width: 260px;
+            height: 100px;
+            mask-image: url(./static/images/jarze.png);
+            -webkit-mask-image: url(./static/images/jarze.png);
+          }
+          mask-bg {
+            background-image: -webkit-linear-gradient(
+              360deg,
+              #89c027,
+              #89c027 14%,
+              #e96036 14%,
+              #e96036 40%,
+              #fef158 40%,
+              #fef158 63%,
+              #76c5ee 63%,
+              #76c5ee 82%,
+              #76c 82%
+            );
+          }
+          mask-top {
+            position: absolute;
+            top: 0;
+            background-image: -webkit-linear-gradient(
+              bottom,
+              #eeeeee,
+              #eeeeee 50%,
+              rgba(0, 0, 0, 0) 50%
+            );
+            background-size: auto 200%;
+            -webkit-background-size: auto 200%;
+            -moz-background-size: auto 200%;
+            background-position: 0 -100%;
+            /* transition: all 0.4s cubic-bezier(0, 0, 0.28, 1) 1s; */
+            animation: mask 0.4s linear infinite alternate;
+          }
+        </style>
+      </section>
+      <section class="code-wrap">
+        <div class="css-live-wrap">
+          <summary>
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/zh-cn/docs/web/css/mask-image"
+              >mask-image
+            </a>
+          </summary>
+          <div class="view-content">
+            <div class="mask"></div>
+          </div>
+        </div>
+        <style class="code" contenteditable="true">
+          @keyframes mask1 {
+            0% {
+              -webkit-mask-position: 0px 0px;
+            }
+            25% {
+              -webkit-mask-position: 619px 0px;
+            }
+            50% {
+              -webkit-mask-position: 0px 0px;
+            }
+            75% {
+              -webkit-mask-position: 308px 0px;
+              -webkit-mask-size: 100%;
+            }
+            100% {
+              -webkit-mask-size: 1000%;
+            }
+          }
+          .mask {
+            width: 700px;
+            height: 392px;
+            background: black url("./static/images/1534750163.jpg");
+            -webkit-mask-image: url("./static/images/1534750222.jpg");
+            animation: mask1 5s linear infinite forwards;
+          }
+        </style>
+      </section>
+    </div>
+  </body>
+</html>
