@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./static/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./static/css/index.css" />
   </head>
+
   <body>
     <div class="container">
       <section class="code-wrap">
@@ -30,7 +31,8 @@
           <summary>@keyframes</summary>
           <div class="view-content">
             <div class="mask-wrapper">
-              <mask-bg></mask-bg> <mask-top></mask-top>
+              <mask-bg></mask-bg>
+              <mask-top></mask-top>
             </div>
           </div>
         </div>
@@ -125,8 +127,71 @@
             width: 700px;
             height: 392px;
             background: black url('./static/images/1534750163.jpg');
+            mask-image: url('./static/images/1534750222.jpg');
             -webkit-mask-image: url('./static/images/1534750222.jpg');
             animation: mask1 5s linear infinite forwards;
+          }
+        </style>
+      </section>
+      <section class="code-wrap">
+        <div class="css-live-wrap">
+          <summary>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient()"
+              >conic-gradient
+            </a>
+            角向渐变
+          </summary>
+          <summary>
+            <a
+              target="_blank"
+              href="https://developer.mozilla.org/zh-cn/docs/Web/CSS/animation"
+              >animation
+            </a>
+          </summary>
+          <div class="view-content">
+            <div class="bg-gradient"></div>
+          </div>
+        </div>
+        <style class="code" contenteditable="true">
+          @keyframes rotate {
+            100% {
+              transform: rotate(1turn);
+            }
+          }
+          @keyframes huerotate {
+            0% {
+              filter: hue-rotate(0deg);
+            }
+            100% {
+              filter: hue-rotate(360deg);
+            }
+          }
+          .bg-gradient {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            background: repeating-conic-gradient(#fff, #000, #fff 0.1deg);
+            border: 10px solid;
+            border-image: linear-gradient(45deg, gold, deeppink) 1;
+            clip-path: inset(0px round 10px);
+            animation: huerotate 6s infinite linear;
+            filter: hue-rotate(360deg);
+          }
+          .bg-gradient::before {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+              transparent,
+              rgba(168, 239, 255, 1),
+              transparent 30%
+            );
+            animation: rotate 4s linear infinite;
           }
         </style>
       </section>
