@@ -4,10 +4,11 @@
 
 除去一些需要背景衬托的图形，本项目中所有图形均为单标签图形，即使用一个标签完成整个图案。
 
-| Demo 链接                                                    | Description                          |
-| ------------------------------------------------------------ | ------------------------------------ |
+| Demo 链接                                                                                                      | Description                          |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
 | [CSS3 奇思妙想](https://jarze.github.io/magicCss/index.html),[CSS3](https://jarze.github.io/magicCss/css.html) | CSS3 奇思妙想，单标签实现各类图形    |
-| [SVG 奇思妙想](https://jarze.github.io/SVG/html/index.html)  | 使用 `SVG` or `clip-path` 创建的图形 |
+| [Loading](https://jarze.github.io/magicCss/loading.html)                                                       | 加载 loading 效果                    |
+| [SVG 奇思妙想](https://jarze.github.io/SVG/html/index.html)                                                    | 使用 `SVG` or `clip-path` 创建的图形 |
 
 ## 由来
 
