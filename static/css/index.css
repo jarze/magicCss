@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   position: relative;
+  counter-reset: section;
 }
 .code-wrap {
   width: 100%;
@@ -30,7 +31,7 @@
   cursor: pointer;
 }
 .star:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 8.65px;
   left: -8.82px;
@@ -45,7 +46,7 @@
   transform: rotate(36deg);
 }
 .star:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 8.65px;
   left: -15px;
@@ -79,6 +80,26 @@
   text-shadow: 0 1px 1px white;
   overflow-y: scroll;
 }
+
+section {
+  counter-increment: section;
+}
+
+section::after {
+  content: counter(section);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.5;
+  padding: 0.5em 1em;
+  border: 10px solid;
+  border-radius: 20% 80% / 70% 30%;
+  border-image: linear-gradient(45deg, #76c5ee, deeppink) 1;
+  -webkit-mask-image: linear-gradient(45deg, black, transparent);
+}
+
 summary {
   position: absolute;
   cursor: default;
@@ -104,11 +125,19 @@ summary:nth-child(3) {
   margin-top: 100px;
 }
 
+summary:nth-child(4) {
+  margin-top: 140px;
+}
+
+summary:nth-child(5) {
+  margin-top: 180px;
+}
+
 summary:hover {
   background-position: -0em bottom;
 }
 .inline-element::after {
-  content: "\A";
+  content: '\A';
   white-space: pre;
 }
 
